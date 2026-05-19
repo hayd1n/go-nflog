@@ -136,7 +136,7 @@ func extractAttribute(a *Attribute, logger Logger, data []byte) error {
 }
 
 func checkHeader(data []byte) int {
-	if (data[0] == unix.AF_INET || data[0] == unix.AF_INET6 || data[0] == unix.AF_BRIDGE) && data[1] == unix.NFNETLINK_V0 {
+	if (data[0] == unix.AF_INET || data[0] == unix.AF_INET6 || data[0] == unix.AF_BRIDGE || data[0] == unix.AF_UNSPEC || data[0] == unix.NFPROTO_NETDEV) && data[1] == unix.NFNETLINK_V0 {
 		return 4
 	}
 	return 0

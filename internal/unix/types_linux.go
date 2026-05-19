@@ -13,4 +13,5 @@ const (
 	AF_INET           = linux.AF_INET
 	AF_INET6          = linux.AF_INET6
 	AF_BRIDGE         = linux.AF_BRIDGE
+	NFPROTO_NETDEV    = linux.NFPROTO_NETDEV
 )
